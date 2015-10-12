@@ -1,0 +1,81 @@
+body {
+	background: black;
+	color: white;
+	font-size: 1.5em;
+}
+h1 {
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+button {
+	font-size: 0.8em;
+	background: #999;
+	cursor: pointer;
+	border: 1px solid green;
+	border-radius: 10px;
+	padding: 0px 10px;
+}
+#landing {
+	padding: 0px;
+	font-size: 2em;
+	width: 100%;
+	text-align: center;
+	background: black;
+	z-index: 2;
+}
+#account {
+	padding: 0px;
+	margin: 10px;
+	width: 100%;
+	text-align: center;
+	background: black;
+	z-index: 2;
+}
+#screen {
+	background: #393;
+	color: #DDD;
+	margin: 10px auto;
+	height: 50px;
+	border-radius: 1000px;
+	overflow: scroll;
+	text-align: center;
+	padding-right: 0;
+	padding-left: 0;
+}
+.input {
+	text-align: center;
+	width: 60%;
+	font-size: 1.5em;
+	background: black;
+	color: white;
+	outline: none;
+	text-decoration: none;
+	border-radius: 20px;
+	border: 1px solid green;
+}
+#inputcontainer {
+	text-align: center;
+	position: absolute;
+	right: 20px;
+	left: 20px;
+	bottom: 10px;
+}
+.content {
+	background: black;
+	border-radius: 1000px;
+	margin: 1px;
+	padding: 30px;
+}
+.small {
+	font-size: 0.5em;
+	color: #777;
+}
+@media (min-device-width: 1320px) and (max-device-width: 1520px) {
+	#screen {
+		font-size: 2.5em;
+		padding-top: 225px;
+		padding-bottom: 225px;
+		width: 900px;
+	}
+}
