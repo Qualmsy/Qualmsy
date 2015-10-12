@@ -1,0 +1,52 @@
+<head>
+  <title>Qualmsy</title>
+</head>
+
+<body>
+  	<h1>Welcome to Qualmsy! <span class="small">Twitter:@iamqualmsy, Github: @Qualmsy</span></h1>
+  	{{#if currentUser}}
+		<div id="account">
+			{{> loginButtons}}
+			{{#if showingusers}}
+				<button class="toggle">Show messages</button>
+			{{else}}
+				<button class="toggle">Show users</button>
+			{{/if}}
+		</div>
+	{{else}}
+		<div id="landing">
+			{{> loginButtons }}
+		</div>
+ 	{{/if}}
+  	<div id="screen">
+  		{{#if hasUsername}}
+	  		{{#if showingusers}}
+				{{#each people}}
+					<div class="content">
+						<span class="small">Username:</span>
+						{{username}}
+						<span class="small">Position:</span>
+						{{position}}
+					</div>
+				{{/each}}
+			{{else}}
+				{{#each messages}}
+					<div class="content messagebox" data-id="{{_id}}">
+						<span class="small">Echo: {{echo}}</span>
+						<span class="text">{{text}}</span>
+						<span data-livestamp="{{timestamp}}" class="small"></span>
+					</div>
+				{{/each}}
+			{{/if}}
+		{{else}}
+			<div class="content">
+				<span>Choose a Username: </span>
+				<input class="input" type="text" data-bind="value: username, returnKey: insertusername"/>
+			</div>
+		{{/if}}
+	</div>
+	<div id="inputcontainer">
+		<input class="input" placeholder="Enter message here..." type="text" data-bind="value: message, returnKey: logMessage"/>
+	</div>
+
+</body>
